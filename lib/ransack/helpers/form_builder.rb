@@ -6,7 +6,7 @@ module ActionView::Helpers::Tags
   # https://github.com/rails/rails/commit/c1a118a
   class Base
     private
-    if ::ActiveRecord::VERSION::STRING < '5.2'
+    if true #::ActiveRecord::VERSION::STRING < '5.2'
       def value(object)
         object.send @method_name if object # use send instead of public_send
       end
